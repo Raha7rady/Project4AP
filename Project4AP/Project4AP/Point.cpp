@@ -32,3 +32,28 @@ Point Point::operator-(const Point& other) {
 void Point::print() {
     std::cout << "Point: (" << x << ", " << y << ")" << std::endl;
 }
+
+
+Point& Point::operator/=(int divisor) {
+    if (divisor == 0) {
+        std::cerr << "Error: Division by zero\n";
+        return *this;
+    }
+
+    x /= divisor;
+    y /= divisor;
+
+    return *this;
+}
+
+Point& Point::operator=(const Point& other) {
+    if (this != &other) {
+        x = other.x;
+        y = other.y;
+    }
+    return *this;
+}
+
+bool Point::operator>=(const Point& other) const {
+    return (x * x + y * y) >= (other.x * other.x + other.y * other.y);
+}

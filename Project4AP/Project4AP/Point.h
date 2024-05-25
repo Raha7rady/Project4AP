@@ -20,6 +20,10 @@ public:
     Point operator-(const Point& other);
     void print();
 
+    Point& operator/=(int divisor);
+    Point& operator=(const Point& other);
+    bool operator>=(const Point& other) const;
+
 };
 
 #endif // POINT_H
