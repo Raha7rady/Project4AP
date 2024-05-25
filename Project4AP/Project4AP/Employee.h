@@ -38,7 +38,9 @@ public:
 
 	bool validate(const string& id);
 
+	void calculateSalary();
 
+	double efficiency() const;
 };
 
 #endif 

@@ -126,3 +126,16 @@ bool Employee:: validate(const std::string& id) {
 
     return true;
 }
+
+void Employee::calculateSalary() {
+    double percentage = static_cast<double>(workDone) / workToDo;
+    double salary = hourWork * salaryPerHour * (percentage);
+
+    std::cout << "Salary for employee " << name << " is: " << salary << std::endl;
+}
+
+double Employee::efficiency() const {
+    double percentage = static_cast<double>(workDone) / workToDo;
+    double efficiency = percentage * hourWork;
+    return efficiency;
+}
