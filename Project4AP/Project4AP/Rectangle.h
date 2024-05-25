@@ -22,6 +22,10 @@ public:
     int getWidth() const;  // Getter for width
     int getHeight() const;  // Getter for height
 
+    Rectangle& operator+=(const Rectangle& other);  // += operator
+    Rectangle& operator-=(const Rectangle& other);  // -= operator
+    Rectangle operator/(const Rectangle& other) const;  // / operator
+
 };
 
 #endif // RECTANGLE_H
