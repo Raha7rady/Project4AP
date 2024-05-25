@@ -32,6 +32,15 @@ public:
 	void setId(const string& id);
 	void setAddress(const Address& address);
 
+	// Overloading the << operator
+	friend ostream& operator<<(ostream& os, const Person& person);
+
+	// Overloading the >> operator
+	friend istream& operator>>(istream& is, Person& person);
+
+	// Assignment operator
+	Person& operator=(const Person& other);
+
 };
 
 #endif // PERSON_H
