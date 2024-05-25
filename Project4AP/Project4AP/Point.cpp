@@ -20,3 +20,15 @@ int Point::getX() const {
 int Point::getY() const {
     return y;
 }
+
+Point Point::operator+(const Point& other) {
+    return Point(this->x + other.x, this->y + other.y);
+}
+
+Point Point::operator-(const Point& other) {
+    return Point(this->x - other.x, this->y - other.y);
+}
+
+void Point::print() {
+    std::cout << "Point: (" << x << ", " << y << ")" << std::endl;
+}

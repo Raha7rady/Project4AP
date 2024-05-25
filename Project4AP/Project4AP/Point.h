@@ -10,10 +10,15 @@ private:
 public:
     Point(int x, int y);
     Point(const Point& other);
+
     void setX(int x);
     void setY(int y);
     int getX() const;
     int getY() const;
+
+    Point operator+(const Point& other);
+    Point operator-(const Point& other);
+    void print();
 
 };
 
