@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "address.h"
 
 using namespace std;
@@ -40,6 +41,9 @@ public:
 
 	// Assignment operator
 	Person& operator=(const Person& other);
+
+	// Validate ID
+	bool validate(const string& id);
 
 };
 
