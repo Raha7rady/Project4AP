@@ -36,6 +36,9 @@ public:
 
 	Employee& operator=(const Employee& other);
 
+	bool validate(const string& id);
+
+
 };
 
 #endif 
