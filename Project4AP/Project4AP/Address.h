@@ -21,6 +21,16 @@ public:
 
 	// Overloading the >> operator
 	friend istream& operator>>(istream& is, Address& address);
+
+	// Getters
+	string getCountry() const;
+	string getCity() const;
+	string getStreet() const;
+
+	// Setters
+	void setCountry(const string& country);
+	void setCity(const string& city);
+	void setStreet(const string& street);
 };
 
 #endif // ADDRESS_H
