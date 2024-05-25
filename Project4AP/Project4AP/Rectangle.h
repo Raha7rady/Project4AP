@@ -26,6 +26,8 @@ public:
     Rectangle& operator-=(const Rectangle& other);  // -= operator
     Rectangle operator/(const Rectangle& other) const;  // / operator
 
+    bool collisionDetection(const Rectangle& other);  // Function to check collision
+
 };
 
 #endif // RECTANGLE_H

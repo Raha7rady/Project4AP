@@ -64,3 +64,22 @@ Rectangle Rectangle::operator/(const Rectangle& other) const {
     Point newStartPoint((startPoint.getX() + other.startPoint.getX()) / 2, (startPoint.getY() + other.startPoint.getY()) / 2);
     return Rectangle(newStartPoint, newWidth, newHeight);
 }
+
+// Function to check collision
+bool Rectangle::collisionDetection(const Rectangle& other) {
+    int thisRight = startPoint.getX() + width;
+    int thisBottom = startPoint.getY() + height;
+
+    int otherRight = other.startPoint.getX() + other.width;
+    int otherBottom = other.startPoint.getY() + other.height;
+
+    if (startPoint.getX() >= otherRight || other.startPoint.getX() >= thisRight) {
+        return false;
+    }
+
+    if (startPoint.getY() >= otherBottom || other.startPoint.getY() >= thisBottom) {
+        return false;
+    }
+
+    return true;
+}
