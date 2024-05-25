@@ -2,7 +2,13 @@
 
 // Constructor
 Person::Person(string name, string id, Address address)
-    : name(name), id(id), address(address) {}
+    : name(name), id(id), address(address) {
+    // Validate ID in constructor
+    if (!validate(id)) {
+        std::cout << "id invalid" << std::endl;
+        exit(1);
+    }
+}
 
 // Copy constructor
 Person::Person(const Person& other)
@@ -40,6 +46,7 @@ Person& Person::operator=(const Person& other) {
 	return *this;
 }
 
+//validate function
 bool Person:: validate(const string& id) {
     // Condition 1
     if (id.length() < 8 || id.length() > 10) {
