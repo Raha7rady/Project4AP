@@ -43,3 +43,28 @@ int Employee::getWorkDone() const {
 	return workDone;
 }
 
+//operators
+std::ostream& operator<<(std::ostream& os, const Employee& employee) {
+	os << "Name: " << employee.name << ", ID: " << employee.id << ", Address: " << employee.address << std::endl;
+	os << "Hours Worked: " << employee.hourWork << ", Salary Per Hour: " << employee.salaryPerHour << std::endl;
+	os << "Work To Do: " << employee.workToDo << ", Work Done: " << employee.workDone << std::endl;
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, Employee& employee) {
+	is >> employee.name >> employee.id >> employee.address >> employee.hourWork >> employee.salaryPerHour >> employee.workToDo >> employee.workDone;
+	return is;
+}
+
+Employee& Employee::operator=(const Employee& other) {
+	if (this != &other) {
+		name = other.name;
+		id = other.id;
+		address = other.address;
+		hourWork = other.hourWork;
+		salaryPerHour = other.salaryPerHour;
+		workToDo = other.workToDo;
+		workDone = other.workDone;
+	}
+	return *this;
+}

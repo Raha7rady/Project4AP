@@ -31,6 +31,10 @@ public:
 	int getWorkToDo() const;
 	int getWorkDone() const;
 
+	friend std::ostream& operator<<(std::ostream& os, const Employee& employee);
+	friend std::istream& operator>>(std::istream& is, Employee& employee);
+
+	Employee& operator=(const Employee& other);
 
 };
 
