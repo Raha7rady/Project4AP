@@ -21,6 +21,17 @@ public:
 	Employee(const std::string& name, const std::string& id, const Address& address);
 	Employee(const Employee& other);
 
+	void setHourWork(int hours);
+	void setSalaryPerHour(int salary);
+	void setWorkToDo(int work);
+	void setWorkDone(int work);
+
+	int getHourWork() const;
+	int getSalaryPerHour() const;
+	int getWorkToDo() const;
+	int getWorkDone() const;
+
+
 };
 
 #endif 
