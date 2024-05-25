@@ -22,6 +22,16 @@ public:
 	// Copy constructor
 	Person(const Person& other);
 
+	// Getters
+	string getName() const;
+	string getId() const;
+	Address getAddress() const;
+
+	// Setters
+	void setName(const string& name);
+	void setId(const string& id);
+	void setAddress(const Address& address);
+
 };
 
 #endif // PERSON_H
