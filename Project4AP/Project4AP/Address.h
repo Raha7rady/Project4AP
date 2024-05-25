@@ -12,6 +12,9 @@ private:
 	string country;
 	string city;
 	string street;
+public:
+	// Constructor
+	Address(string country, string city, string street);
 };
 
 #endif // ADDRESS_H
